@@ -2,25 +2,16 @@ import { Route, Routes } from "react-router-dom";
 import HomePage from "../pages/home";
 import CartPage from "../pages/cart";
 import ProductPage from "../pages/product";
+import ProductsPage from "../pages/products";
+import CategoriesPage from "../pages/categories";
 
-// const renderRoutes = (routes) => {
-//   return routes.map((route, index) => {
-//     console.log(6);
-//     return (
-//       <Route key={index} path={route.path} element={route.component}>
-//         {route.children && renderRoutes(route.children)}
-//       </Route>
-//     );
-//   });
-// };
-
-const RouterList = ({ routes }) => {
+const RouterList = () => {
   return (
     <Routes>
-      {/* {renderRoutes(routes)} */}
       <Route path="/" element={<HomePage />} />
-      <Route path="/categories" element={<HomePage />} />
-      <Route path="/product" element={<ProductPage />} />
+      <Route path="/categories" element={<CategoriesPage />} />
+      <Route path="/products/:id" element={<ProductPage />} />
+      <Route path="/products" element={<ProductsPage />} />
       <Route path="/cart" element={<CartPage />} />
     </Routes>
   );

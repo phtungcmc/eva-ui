@@ -1,17 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import "./index.css";
 import App from "./App";
-import { BrowserRouter } from "react-router-dom";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
+import reportWebVitals from "./reportWebVitals";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ShoppingCartProvider>
+      <BrowserRouter>
+        <Toaster position="top-center" reverseOrder={false} />
+        <App />
+      </BrowserRouter>
+    </ShoppingCartProvider>
   </React.StrictMode>
 );
 

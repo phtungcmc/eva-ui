@@ -1,18 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Intro = () => {
   return (
     <section className="text-gray-600 body-font">
       <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
         <img
-          className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+          className="lg:w-3/6 lg:h-full md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
           alt="hero"
-          src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZnVybml0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60/720x600"
+          src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80"
         />
         <div className="text-center lg:w-2/3 w-full">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
-            Culpa id cillum minim non do cupidatat reprehenderit irure dolor
-            occaecat.
+            Make your home more beautiful than ever
           </h1>
           <p className="mb-8 leading-relaxed">
             Dolore aliqua aute culpa exercitation occaecat labore consequat eu
@@ -22,12 +22,12 @@ const Intro = () => {
             exercitation id deserunt quis occaecat proident incididunt.
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
-              Button
-            </button>
-            <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">
-              Button
-            </button>
+            <Link
+              to="/products"
+              className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Explore Products
+            </Link>
           </div>
         </div>
       </div>

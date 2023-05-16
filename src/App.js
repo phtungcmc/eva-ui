@@ -1,16 +1,21 @@
 import "./App.css";
+import Cart from "./components/cart";
+import { useShoppingCart } from "./context/ShoppingCartContext";
 import Footer from "./layouts/Footer";
 import Header from "./layouts/Header";
 import RouterList from "./routes/RouterList";
-import { routes } from "./routes/routes";
 
 function App() {
+  const { isOpen } = useShoppingCart();
   return (
-    <div className="App">
-      <Header />
-      <RouterList routes={routes} />
-      <Footer />
-    </div>
+    <>
+      <Cart />
+      <div className={`App ${isOpen && "opacity-50"}`}>
+        <Header />
+        <RouterList />
+        <Footer />
+      </div>
+    </>
   );
 }
 
