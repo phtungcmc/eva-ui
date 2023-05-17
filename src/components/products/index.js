@@ -66,10 +66,10 @@ const Products = ({ limit = 0 }) => {
                 </Link>
                 <div className="mt-4 text-left">
                   <Link className=" cursor-pointer">
-                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">
+                    <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase h-8">
                       {item.title}
                     </h3>
-                    <h2 className="text-gray-900 title-font text-lg font-medium">
+                    <h2 className="text-gray-900 title-font text-lg font-medium h-20">
                       {item.description
                         ? item.description
                         : "Ready Dining Chair without upholstery"}
